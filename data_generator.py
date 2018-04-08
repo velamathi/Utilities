@@ -33,7 +33,7 @@ def data_generator(data_frame, column_list_to_change, run_loops=10):
             df[column] = df[column] + np.random.randn()/10000
         new_data_frame_list.append(df)
         run_loops -= 1
-    return_data_frame = (pd.concat(new_data_frame_list, axis=0))
+    return_data_frame = pd.concat(new_data_frame_list, axis=0)
     return_data_frame = return_data_frame.reset_index()
     return return_data_frame
 
